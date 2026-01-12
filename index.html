@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mangal Bazaar – Stall Booking</title>
-
-  <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangal Bazaar</title>
+<link rel="stylesheet" href="style.css">
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    
-  </style>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-      <img src="./WhatsApp_Image_2025-12-08_at_18.08.20_e8d51840-removebg-preview(1).png" alt="" height="40">
-      Mangal Bazaar
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="./WhatsApp_Image_2025-12-08_at_18.08.20_e8d51840-removebg-preview(1).png" alt="OMJ Logo">
+      <span>Mangal Bazaar</span>
     </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="nav" class="collapse navbar-collapse">
+
+    <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#book">Book Stall</a></li>
@@ -37,63 +39,48 @@
   </div>
 </nav>
 
-<!-- Hero -->
-<section id="home" class="hero mt-5" style="background:linear-gradient(135deg,#062925,#0b3d39);color:#fff;">
+<!-- HERO -->
+<section id="home" class="hero">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6">
-        <h1 class="fw-bold">Mangal Bazaar</h1>
-        <p class="lead mb-2">Every Month · <strong>First Tuesday</strong></p>
-        <p class="mb-3">2 PM – 10 PM</p>
+      <div class="col-md-6 text-white">
+        <h1>Mangal Bazaar</h1>
+        <p>Every Month · <b>First Tuesday</b></p>
+        <p>2 PM – 10 PM</p>
         <p class="opacity-75">
-          Organized under <strong>Okhai Memon Jamat (OMJ)</strong>, this bazaar
-          is held every month on the <strong>first Tuesday</strong> to support
-          women entrepreneurs in a safe and trusted environment.
+          Organized by Okhai Memon Jamat to support women entrepreneurs.
         </p>
-        <a href="#book" class="btn btn-light btn-lg mt-3">Book Your Stall</a>
+        <a href="#book" class="btn btn-light mt-3">Book Your Stall</a>
       </div>
-      <div class="col-md-6 text-center">
-        <!-- Hero Image -->
-      <section class="hero-video">
-  <video autoplay muted loop playsinline class="bg-video">
+
+      <div class="col-md-6 video-wrap">
+  <video class="hero-video" autoplay muted loop playsinline>
     <source src="./WhatsApp Video 2025-12-23 at 12.03.35 AM - Copy.mp4" type="video/mp4">
   </video>
+</div>
 
- 
-</section>
-
-      </div>
     </div>
   </div>
 </section>
 
-
-<section class="stall-booking">
-
-  <div class="booking-box">
+<!-- BOOKING -->
+<section id="book" class="booking-section">
+  <div class="booking-card">
     <h3>Book Stall</h3>
-    <p>Remaining Stalls: <span id="remaining">10</span></p>
 
-    <input type="text" id="name" placeholder="Full Name">
-    <input type="tel" id="phone" placeholder="Phone Number">
+    <input type="text" placeholder="Full Name">
+    <input type="tel" placeholder="Phone Number">
 
-    <label>Payment Method</label>
-    <select id="payment">
-      <option value="">Select</option>
+    <select>
+      <option>Select Payment</option>
       <option>EasyPaisa</option>
       <option>JazzCash</option>
       <option>Card</option>
     </select>
 
-    <button onclick="payNow()">Pay Rs. 500</button>
+   <button onclick="bookStall()">Pay Rs. 500</button>
   </div>
-
 </section>
-
-<div class="success-msg" id="success"></div>
-
-
-
 <!-- OMJ Event Poster -->
 <section class="booking">
   <div class="container">
@@ -119,134 +106,32 @@
   </div>
 </section>
 
-<!-- Gallery -->
-<section class="bazaar-moments">
-  <div class="container">
-    <h2 class="section-title">Bazaar Moments</h2>
+<!-- GALLERY -->
+ <div class="bazaar-moment">
+<section id="gallery" class="gallery">
+  <div class="container1">
+    <h2 class="text-center mb-4">Bazaar Moments</h2>
 
-    <div class="moments-grid">
-      <!-- Image 1 -->
-      <div class="moment-card">
-        <img src="./WhatsApp Image 2025-12-29 at 7.36.09 PM.jpeg" alt="Bazaar Moment">
-      </div>
-
-      <!-- Image 2 -->
-      <div class="moment-card">
-        <img src="./WhatsApp Image 2025-12-23 at 12.41.42 AM.jpeg" alt="Bazaar Moment">
-      </div>
-
-      <!-- Image 3 -->
-      <div class="moment-card">
-        <img src="./WhatsApp Image 2025-12-29 at 7.48.33 PM.jpeg" alt="Bazaar Moment">
-      </div>
-
-    
+    <div class="gallery-grid">
+      <img class="myii" src="./WhatsApp Image 2025-12-29 at 7.36.09 PM.jpeg">
+      <img class="myi" src="./WhatsApp Image 2025-12-29 at 7.48.33 PM.jpeg">
+      <img class="myi" src="./WhatsApp Image 2025-12-29 at 7.48.33 PM.jpeg">
     </div>
+  </div>
   </div>
 </section>
 
-
-
-<footer class="main-footer">
-
-  <div class="footer-content">
-    
-    <div class="footer-about">
-      <h3>Mangal Bazaar</h3>
-      <p>
-        Community stall booking system.  
-        Har month first Tuesday ko Mangal Bazaar lagta hai.
-      </p>
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container footer-flex">
+    <p>© 2026 Mangal Bazaar</p>
+    <div class="icons">
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
     </div>
-
-    <div class="footer-contact1">
-      
-
-      
-        <a href="https://wa.me/923001234567" target="_blank">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-   <a href="fa-brands fa-facebook" target="_blank">
- <i class="fa-brands fa-facebook"></i>
-</a>
-
-      
-    </div>
-
   </div>
-
-  <div class="footer-bottom">
-    © 2026 Mangal Bazaar | All Rights Reserved
-  </div>
-
 </footer>
-
-
-<script src="app.js"></script>
+<script src="index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-
-<script>
-/* 🔴 PASTE YOUR FIREBASE CONFIG HERE */
-const firebaseConfig = {
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-};
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-const totalStalls = 10;
-
-/* load remaining stalls */
-db.collection("bookings").onSnapshot(snapshot=>{
-  document.getElementById("remaining").innerText =
-    totalStalls - snapshot.size;
-});
-
-function payNow(){
-
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let payment = document.getElementById("payment").value;
-
-  if(name=="" || phone=="" || payment==""){
-    alert("Fill all fields");
-    return;
-  }
-
-  db.collection("bookings").get().then(snapshot=>{
-
-    if(snapshot.size >= totalStalls){
-      alert("No stalls remaining");
-      return;
-    }
-
-    let stallNumber = snapshot.size + 1;
-
-    db.collection("bookings").add({
-      name: name,
-      phone: phone,
-      payment: payment,
-      stall: stallNumber,
-      status: "Paid",
-      time: new Date()
-    });
-
-    document.getElementById("success").style.display="block";
-    document.getElementById("success").innerHTML =
-      `✅ Payment Successful<br>
-       🪑 Stall Number: <b>${stallNumber}</b>`;
-
-    document.getElementById("name").value="";
-    document.getElementById("phone").value="";
-    document.getElementById("payment").value="";
-  });
-}
-</script>
-
 </body>
 </html>
