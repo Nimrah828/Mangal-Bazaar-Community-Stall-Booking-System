@@ -1,3 +1,6 @@
+ function bookStall() {
+    alert("✅ Payment Successful!\nYour Stall Number is: MB-" + Math.floor(Math.random() * 100 + 1));
+  }
 function nextStep(){
     let name = document.getElementById("userName").value;
     let phone = document.getElementById("userPhone").value;
